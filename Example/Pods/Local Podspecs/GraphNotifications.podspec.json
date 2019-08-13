@@ -1,0 +1,22 @@
+{
+  "name": "GraphNotifications",
+  "version": "0.1.0",
+  "summary": "A short description of GraphNotifications.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/AdamCrabtreeMSFT/GraphNotifications",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AdamCrabtreeMSFT": "venne1138@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/AdamCrabtreeMSFT/GraphNotifications.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GraphNotifications/Classes/**/*"
+}

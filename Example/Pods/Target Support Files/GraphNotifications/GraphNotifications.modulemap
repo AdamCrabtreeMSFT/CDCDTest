@@ -1,0 +1,6 @@
+framework module GraphNotifications {
+  umbrella header "GraphNotifications-umbrella.h"
+
+  export *
+  module * { export * }
+}

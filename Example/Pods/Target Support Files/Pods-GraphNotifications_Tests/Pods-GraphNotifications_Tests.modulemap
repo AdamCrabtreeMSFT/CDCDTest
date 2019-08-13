@@ -1,0 +1,6 @@
+framework module Pods_GraphNotifications_Tests {
+  umbrella header "Pods-GraphNotifications_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
