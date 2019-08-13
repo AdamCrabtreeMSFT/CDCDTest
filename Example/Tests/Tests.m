@@ -7,11 +7,9 @@
 //
 
 // https://github.com/Specta/Specta
-#include <GNAuthenticiation.h>
 SpecBegin(InitialSpecs)
 
 describe(@"these will fail", ^{
-    [GNAuthenticator ConnectToAFS];
     it(@"can do maths", ^{
         expect(1).to.equal(2);
     });
