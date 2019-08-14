@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    bool isTrue = [GNAuthenticator ConnectToAFS];
+    bool isTrue = [GNAuthenticator FailedBuildOption];
     return YES;
 }
 
