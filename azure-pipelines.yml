@@ -6,7 +6,6 @@ steps:
 - task: ms-devlabs.utilitytasks.task-Shellpp.Shell++@0
   displayName: 'Checkout sources'
   inputs:
-    type: InlineScript
     script:
      git checkout --progress --force $PARENTCOMMITID 
      gem install cocoapods
@@ -18,14 +17,6 @@ steps:
     script:
       set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/GraphNotifications.xcworkspace -scheme GraphNotifications-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
       pod lib lint
-
-- task: ms-devlabs.utilitytasks.task-Shellpp.Shell++@0
-  displayName: 'Run SDK Unit Tests'
-  inputs:
-    type: FilePath
-    scriptPath: tools/scripts/Test/RuniOSTests.sh
-    args: '-s'
-  timeoutInMinutes: 15
 
 - task: PublishTestResults@1
   displayName: 'Publish Test Results'
