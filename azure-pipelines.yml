@@ -1,20 +1,36 @@
-# Xcode
-# Build, test, and archive an Xcode workspace on macOS.
-# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
-
-trigger:
-- master
-
 pool:
-  vmImage: 'macos-latest'
+  name: Project Rome
+  demands: sh
 
 steps:
-- task: Xcode@5
+- task: ms-devlabs.utilitytasks.task-Shellpp.Shell++@0
+  displayName: 'Checkout sources'
   inputs:
-    actions: 'build'
-    scheme: ''
-    sdk: 'iphoneos'
-    configuration: 'Release'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    type: InlineScript
+    script:
+     git checkout --progress --force $PARENTCOMMITID 
+     git submodule update --recursive --init --force
+     gem install cocoapods
+     
+
+- task: ms-devlabs.utilitytasks.task-Shellpp.Shell++@0
+  displayName: Build
+  inputs:
+    script:
+      set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/GraphNotifications.xcworkspace -scheme GraphNotifications-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+      pod lib lint
+
+- task: ms-devlabs.utilitytasks.task-Shellpp.Shell++@0
+  displayName: 'Run SDK Unit Tests'
+  inputs:
+    type: FilePath
+    scriptPath: tools/scripts/Test/RuniOSTests.sh
+    args: '-s'
+  timeoutInMinutes: 15
+
+- task: PublishTestResults@1
+  displayName: 'Publish Test Results'
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '_build/sim/test/tdd/runners/ios/Debug-iphonesimulator/*.trx'
+  condition: succeededOrFailed()
