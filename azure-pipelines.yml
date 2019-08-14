@@ -9,7 +9,6 @@ steps:
     type: InlineScript
     script:
      git checkout --progress --force $PARENTCOMMITID 
-     git submodule update --recursive --init --force
      gem install cocoapods
      
 
