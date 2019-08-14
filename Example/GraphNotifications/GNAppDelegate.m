@@ -7,12 +7,13 @@
 //
 
 #import "GNAppDelegate.h"
-
+#import <GNAuthenticiation.h>
 @implementation GNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    bool isTrue = [GNAuthenticator ConnectToAFS];
     return YES;
 }
 

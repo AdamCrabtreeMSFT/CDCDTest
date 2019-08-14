@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		AE28F4B623046AB0001E3F5B /* GraphNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE28F4B523046AB0001E3F5B /* GraphNotifications.framework */; };
 		B145D9DE0CC5F411A463E765 /* Pods_GraphNotifications_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07788F127BFCB1E66F46561 /* Pods_GraphNotifications_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +41,7 @@
 		140046EAD92F99B8A3756FA4 /* Pods-GraphNotifications_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphNotifications_Example.debug.xcconfig"; path = "Target Support Files/Pods-GraphNotifications_Example/Pods-GraphNotifications_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		233019C9BE091FA4430FBAC0 /* Pods-GraphNotifications_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphNotifications_Example.release.xcconfig"; path = "Target Support Files/Pods-GraphNotifications_Example/Pods-GraphNotifications_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2B790F9F7902DC222FC5E2C2 /* Pods_GraphNotifications_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphNotifications_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AB15563D25A367F2A4164CF /* GraphNotifications.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GraphNotifications.podspec; path = ../GraphNotifications.podspec; sourceTree = "<group>"; };
+		4AB15563D25A367F2A4164CF /* GraphNotifications.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GraphNotifications.podspec; path = ../GraphNotifications.podspec; sourceTree = "<group>"; };
 		54B47D477607417D07F1EF9F /* Pods-GraphNotifications_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphNotifications_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GraphNotifications_Tests/Pods-GraphNotifications_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* GraphNotifications_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphNotifications_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,9 +65,10 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6F36E3D173D78B9F31BB60F /* Pods-GraphNotifications_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphNotifications_Tests.release.xcconfig"; path = "Target Support Files/Pods-GraphNotifications_Tests/Pods-GraphNotifications_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AE28F4B523046AB0001E3F5B /* GraphNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GraphNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07788F127BFCB1E66F46561 /* Pods_GraphNotifications_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphNotifications_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE0FD5A5E3409F422AA1B69B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EFD48856E20578C648266781 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EE0FD5A5E3409F422AA1B69B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EFD48856E20578C648266781 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE28F4B623046AB0001E3F5B /* GraphNotifications.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -119,6 +122,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE28F4B523046AB0001E3F5B /* GraphNotifications.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -193,7 +197,6 @@
 				54B47D477607417D07F1EF9F /* Pods-GraphNotifications_Tests.debug.xcconfig */,
 				A6F36E3D173D78B9F31BB60F /* Pods-GraphNotifications_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +262,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -519,6 +523,10 @@
 			baseConfigurationReference = 140046EAD92F99B8A3756FA4 /* Pods-GraphNotifications_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GraphNotifications\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraphNotifications/GraphNotifications-Prefix.pch";
 				INFOPLIST_FILE = "GraphNotifications/GraphNotifications-Info.plist";
